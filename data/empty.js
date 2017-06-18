@@ -1,4 +1,4 @@
-var dataStruct = {
+var content = {
     "subject": "",
     "subheader": "",
     "img": {
@@ -16,6 +16,8 @@ var dataStruct = {
     "link": {
         "type": "a",
         "href": "",
-        "children": ""
+        "children": [
+            "" // Hyperlink text goes here. If this is empty, link will be missing.
+        ]
     }
 };
