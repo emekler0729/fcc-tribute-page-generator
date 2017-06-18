@@ -1,18 +1,21 @@
-/**
- * Created by Eduard on 6/17/2017.
- */
-var data = {
-    "subject": null,
-    "subheader": null,
-    "imgurl": null,
-    "caption": null,
+var dataStruct = {
+    "subject": "",
+    "subheader": "",
+    "img": {
+        "type": "img",
+        "className": "img-responsive center-block",
+        "alt": "",
+        "src": ""
+    },
+    "caption": "",
     "timeline": [
-        {"year": null, "text": null}
+        {"year": "", "string": ""}
     ],
-    "quote": null,
-    "source": null,
+    "quote": "",
+    "source": "",
     "link": {
-        "linktext": null,
-        "linkurl": null
+        "type": "a",
+        "href": "",
+        "children": ""
     }
 };

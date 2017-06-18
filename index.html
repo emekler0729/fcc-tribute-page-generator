@@ -15,8 +15,8 @@
         <h2 class="text-center"><i>{{subheader}}</i></h2>
         <div class="panel panel-default">
             <div class="panel-body">
-                <img class="img-responsive center-block" alt="Picture" src="{{imgurl}}">
-                {{caption}}
+                <span>{{img}}</span>
+                <div class="text-center">{{caption}}</div>
             </div>
         </div>
         <div id="content" class="center-block">
@@ -25,12 +25,17 @@
                 {{timeline}}
             </ul>
             <blockquote>
-                <p>{{quote}}</p>
+                <p>"<span>{{quote}}</span>"</p>
                 <footer>{{source}}</footer>
             </blockquote>
-            <h3>Read more at this link: <a href="{{linkurl}}">{{linktext}}</a></h3>
+            <h3>Read more at this link: <span>{{link}}</span></h3>
         </div>
     </div>
 </div>
+<script src="code/tribute-generator.js"></script>
+<script src="data/example.js"></script>
+<script>
+    fillTemplate('#wrap', dataStruct);
+</script>
 </body>
 </html>
