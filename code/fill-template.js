@@ -37,6 +37,7 @@ function fillTemplate(selector, content) {
             var parent = node.parentNode; // Store the parent node.
             parent.textContent = ""; // Clear content.
 
+            //@TODO Generalize the timeline functionality
             // If the field name is timeline, generate specially formatted timeline elements.
             if (match == 'timeline') {
                 if(!Array.isArray(content[match])) {

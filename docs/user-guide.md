@@ -1,6 +1,6 @@
-## Development Notes
+## User Guide
 
-### HTML Template
+### HTML Template Example
 
 ``` HTML
 <div id="wrap" class="container-fluid" style="display: none">
@@ -28,7 +28,15 @@
 </div>
 ```
 
-Javascript routine will parse through the template and replace placeholder fields indicated by double curly brace notation `{{field_name}}` with information in a JSON object. **Note:** The placeholder must be the only child of its immediate parent node. If it must be placed in a specific location or in a parent node with other content, then wrap the placeholder in `<span>` tags.
+#### Requirements
+
+- Placeholder tag must comply with following notation: `{{field-name}}`. 
+- The field name should be present in the content object. **NOTE:** If the placeholder tag is not present in the content object then the placeholder's parent element will be removed from the document.
+- Placeholder tag must be the only child of its immediate parent. If the tag is in an element with other content then wrap it with `<span>` tags.
+
+#### Description
+
+Javascript routine will parse through the template and replace placeholder fields indicated by double curly brace notation `{{field_name}}` with information in a JSON object.
 
 ### JSON Object Structure
 
@@ -67,9 +75,3 @@ The type of data associated with the JSON object property will determine the typ
 ``` HTML
 <li><b>{{year}}</b> - {{string}}</li>
 ```
-
-### Program Steps
-
-1. Get a handle for the template.
-2. Index through the template nodes and check for text nodes that match the placeholder notation.
-3. When a placeholder is found replace the placeholder text with a new element created from the data related to that placeholder in the JSON object.
