@@ -100,7 +100,7 @@ function createElement(attributes) {
 
             attributes.children.forEach(function(child) {
                 node.appendChild(createElement(child));
-            })
+            });
         }
 
         return node;
